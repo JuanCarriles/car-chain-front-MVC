@@ -214,10 +214,11 @@ export default function PageDashboardDefault() {
   useEffectOnce(() => {
     setLoading(true);
     setError(false);
+    const baseUrl = import.meta.env.VITE_BASEURL;
 
     // Crear un array de todas las promesas
     const fetchPromises = [
-      fetch("http://localhost:3000/api/dashboard/dashboard/siniestros-data")
+      fetch(`${baseUrl}/api/dashboard/dashboard/siniestros-data`)
         .then((res) => res.json())
         .then((result) => {
           setsiniestrosData(result.data);
@@ -225,7 +226,7 @@ export default function PageDashboardDefault() {
           console.log(result);
         }),
 
-      fetch("http://localhost:3000/api/dashboard/dashboard/coberturas-data")
+      fetch(`${baseUrl}/api/dashboard/dashboard/coberturas-data`)
         .then((res) => res.json())
         .then((result) => {
           setCoberturaDataState(result.data);
@@ -233,7 +234,7 @@ export default function PageDashboardDefault() {
           console.log(result);
         }),
 
-      fetch("http://localhost:3000/api/dashboard/dashboard/recaudacion-data")
+      fetch(`${baseUrl}/api/dashboard/dashboard/recaudacion-data`)
         .then((res) => res.json())
         .then((result) => {
           setRecaudacionDataState(result.data);
@@ -241,7 +242,7 @@ export default function PageDashboardDefault() {
           console.log(result);
         }),
 
-      fetch("http://localhost:3000/api/dashboard/dashboard/cotizaciones-data")
+      fetch(`${baseUrl}/api/dashboard/dashboard/cotizaciones-data`)
         .then((res) => res.json())
         .then((result) => {
           setCotizacionesDataState(result.data);
@@ -249,7 +250,7 @@ export default function PageDashboardDefault() {
           console.log(result);
         }),
 
-      fetch("http://localhost:3000/api/dashboard/dashboard/kpi-data")
+      fetch(`${baseUrl}/api/dashboard/dashboard/kpi-data`)
         .then((res) => res.json())
         .then((result) => {
           setKpiData(result.data);
@@ -257,7 +258,7 @@ export default function PageDashboardDefault() {
           console.log(result);
         }),
 
-      fetch("http://localhost:3000/api/dashboard/dashboard/status")
+      fetch(`${baseUrl}/api/dashboard/dashboard/status`)
         .then((res) => res.json())
         .then((result) => {
           setSystemStatus(result.data);
