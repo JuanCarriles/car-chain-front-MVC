@@ -1,5 +1,5 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import DashboardAdmin from "../views/pages/DashboardAdmin";
+import DashboardAdmin from "../views/pages/HomeAdmin";
 import Spinner from "../views/components/GeneralComponents/SpinnerLoader";
 import useDashboardStatusHook from "./controllerHooks/Fetchs/useDashboardStatus";
 import VendedorPage from "../views/pages/VendedorPage";

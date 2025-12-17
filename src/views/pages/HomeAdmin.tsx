@@ -8,7 +8,7 @@ import ControladorModelos from "../../controllers/ControladorModelos";
 import ControladorVersiones from "../../controllers/ControladorVersiones";
 import { useAuth0 } from "@auth0/auth0-react";
 import ControladorPeriodoPago from "../../controllers/ControladorPeriodoPago";
-import PageDashboardDefault from "../components/PageDefaultDashboard";
+import PageDashboardDefault from "../components/DefaultDashboard";
 
 import {
   Users,
@@ -26,7 +26,7 @@ import ControladorTipoContratacion from "../../controllers/ControladorTipoContra
 import ControladorConfiguraciones from "../../controllers/ControladorConfiguraciones";
 import ControladorUsuarios from "../../controllers/ControladorUsuarios";
 
-export default function Home({ count, status }: { count: any; status: any }) {
+export default function Home() {
   const { logout } = useAuth0();
   const [activeSection, setActiveSection] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -88,12 +88,7 @@ export default function Home({ count, status }: { count: any; status: any }) {
       case "configuraciones":
         return <ControladorConfiguraciones />;
       default:
-        return (
-          <PageDashboardDefault
-            count={count}
-            status={status}
-          ></PageDashboardDefault>
-        );
+        return <PageDashboardDefault></PageDashboardDefault>;
     }
   };
 
@@ -340,9 +335,8 @@ export default function Home({ count, status }: { count: any; status: any }) {
                   }
                   setIsMobileMenuOpen(false);
                 }}
-                className={`nav-button ${
-                  activeSection === item.id ? "active" : ""
-                }`}
+                className={`nav-button ${activeSection === item.id ? "active" : ""
+                  }`}
               >
                 <item.icon className="w-5 h-5 me-2" />
                 <span>{item.label}</span>
