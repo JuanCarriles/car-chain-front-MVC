@@ -4,7 +4,7 @@ Interfaz del sistema de gestión de pólizas de seguro vehicular Car-Chain: coti
 
 Proyecto final de la carrera de Ingeniería en Sistemas de Información — Universidad Tecnológica Nacional, Facultad Regional Tucumán.
 
-**[Ver demostración en video]([https://www.youtube.com/watch?v=fzim2_93Q-U])** · API: **[car-chain-back-MVC](https://github.com/JuanCarriles/car-chain-back-MVC)**
+**[Ver demostración en video](https://www.youtube.com/watch?v=fzim2_93Q-U)** · API: **[car-chain-back-MVC](https://github.com/JuanCarriles/car-chain-back-MVC)**
 
 ![Captura de la aplicación](src/views/assets/carchain.png)
 
